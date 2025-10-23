@@ -8,11 +8,16 @@ namespace Labb2_Arv
 {
     internal class Truck : Vehicle
     {
-        public int MaxLoad { get; set; }
+        public int MaxLoad { get; set; } = 600;
+
+        public Truck(string name, string brand, string model, string color, int price, int maxload) : base(name, brand, model, color, price)
+        {
+            
+        }
 
         public void startEngine()
         {
-
+            Console.WriteLine("brumm-brumm");
         }
 
         public void Unloading()

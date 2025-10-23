@@ -8,11 +8,21 @@ namespace Labb2_Arv
 {
     internal class Vehicle
     {
-        public string Name { get; set; }
-        public string Brand { get; set; }
-        public string Model { get; set; }
-        public string Color { get; set; }
-        public int Price { get; set; }  
+        public string Name { get; set; } = "Okänt fordon";
+        public string Brand { get; set; } = "Okänt märke";
+        public string Model { get; set; } = "Okänd modell";
+        public string Color { get; set; } = "Okänd färg";
+        public int Price { get; set; } = 0;
+
+        public Vehicle(string name, string brand, string model, string color, int price)
+        {
+            Name = name;
+            Brand = brand;
+            Model = model;
+            Color = color;
+            Price = price;
+
+        }
 
         public void Drive()
         {
