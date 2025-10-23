@@ -10,8 +10,9 @@ namespace Labb2_Arv
     {
         public bool SideCar { get; set; } = false;
 
-        public Motorcycle(string name, string brand, string model, string color, int price, bool sidebar) : base(name, brand, model, color, price)
+        public Motorcycle(string name, string brand, string model, string color, int price, bool sidecar) : base(name, brand, model, color, price)
         {
+            SideCar = sidecar;
 
         }
 
@@ -22,6 +23,7 @@ namespace Labb2_Arv
         }
         public void ParryQuickly()
         {
+
 
         }
     }

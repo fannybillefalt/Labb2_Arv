@@ -12,7 +12,7 @@ namespace Labb2_Arv
 
         public Truck(string name, string brand, string model, string color, int price, int maxload) : base(name, brand, model, color, price)
         {
-            
+            MaxLoad = maxload;
         }
 
         public void startEngine()
@@ -22,6 +22,7 @@ namespace Labb2_Arv
 
         public void Unloading()
         {
+            Console.WriteLine("PIP! PIP! PIP! Lastbilen lastar ur.");
 
         }
     }

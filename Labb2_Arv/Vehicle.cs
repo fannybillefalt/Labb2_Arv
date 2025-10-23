@@ -24,19 +24,19 @@ namespace Labb2_Arv
 
         }
 
-        public void Drive()
+        public virtual void Drive()
         {
-
+            Console.WriteLine("Nu kör bilen!");
         }
 
         public void PumpingGas()
         {
-
+            
         }
 
         public void Break()
         {
-
+            Console.WriteLine("BROMSAAAAAAAA!");
         }
 
     }

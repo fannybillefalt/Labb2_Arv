@@ -12,16 +12,16 @@ namespace Labb2_Arv
 
         public Car(string name, string brand, string model, string color, int price, int doors) :base(name, brand, model, color, price)
         {
-            
+            Doors = doors;
         }
 
         public void startEngine()
         {
             Console.WriteLine("vrrrrooooom");
         }
-        public void Refuel()
+        public bool Refuel()
         {
-
+            return false;
         }
     }
 }
