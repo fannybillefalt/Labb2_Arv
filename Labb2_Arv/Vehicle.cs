@@ -8,15 +8,15 @@ namespace Labb2_Arv
 {
     internal class Vehicle
     {
-        public string Name { get; set; } = "Okänt fordon";
+        public string Owner { get; set; } = "Okänd ägare";
         public string Brand { get; set; } = "Okänt märke";
         public string Model { get; set; } = "Okänd modell";
         public string Color { get; set; } = "Okänd färg";
         public int Price { get; set; } = 0;
 
-        public Vehicle(string name, string brand, string model, string color, int price)
+        public Vehicle(string owner, string brand, string model, string color, int price)
         {
-            Name = name;
+            Owner = owner;
             Brand = brand;
             Model = model;
             Color = color;
@@ -24,9 +24,14 @@ namespace Labb2_Arv
 
         }
 
-        public virtual void Drive()
+
+        public virtual void startEngine()
         {
-            Console.WriteLine("Nu kör bilen!");
+            Console.WriteLine("vrrrrooooom");
+        }
+        public void Drive()
+        {
+            Console.WriteLine($"Nu kör {Owner}");
         }
 
         public void PumpingGas()
@@ -36,7 +41,7 @@ namespace Labb2_Arv
 
         public void Break()
         {
-            Console.WriteLine("BROMSAAAAAAAA!");
+            Console.WriteLine($"{Owner}BROMSAAAAAAAAR!");
         }
 
     }

@@ -10,12 +10,16 @@ namespace Labb2_Arv
     {
         public int MaxLoad { get; set; } = 600;
 
-        public Truck(string name, string brand, string model, string color, int price, int maxload) : base(name, brand, model, color, price)
+        public Truck(string owner, string brand, string model, string color, int price, int maxload) : base(owner, brand, model, color, price)
         {
             MaxLoad = maxload;
         }
 
-        public void startEngine()
+        public void Drive()
+        {
+            Console.WriteLine($"Nu kör {Owner}");
+        }
+        public override void startEngine()
         {
             Console.WriteLine("brumm-brumm");
         }

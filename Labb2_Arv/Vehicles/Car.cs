@@ -10,12 +10,12 @@ namespace Labb2_Arv
     {
         public int Doors { get; set; } = 4;
 
-        public Car(string name, string brand, string model, string color, int price, int doors) :base(name, brand, model, color, price)
+        public Car(string owner, string brand, string model, string color, int price, int doors) :base(owner, brand, model, color, price)
         {
             Doors = doors;
         }
 
-        public void startEngine()
+        public override void startEngine()
         {
             Console.WriteLine("vrrrrooooom");
         }

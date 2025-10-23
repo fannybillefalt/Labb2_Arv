@@ -13,11 +13,16 @@ namespace Labb2_Arv
     internal class MiniBus : Car
     {
         public int Seats { get; set; } = 7;
-        public MiniBus(string name, string brand, string model, string color, int price, int doors, int seats) :base(name, brand, model, color, price, doors)
+        public MiniBus(string owner, string brand, string model, string color, int price, int doors, int seats) :base(owner, brand, model, color, price, doors)
         {
 
             Seats = seats;
 
+        }
+
+        public override void startEngine()
+        {
+            Console.WriteLine("vrummi vrummi");
         }
 
     }
