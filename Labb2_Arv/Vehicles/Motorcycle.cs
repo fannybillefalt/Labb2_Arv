@@ -10,18 +10,21 @@ namespace Labb2_Arv
     {
         public bool SideCar { get; set; } = false;
 
-        public Motorcycle(string name, string brand, string model, string color, int price, bool sidebar) : base(name, brand, model, color, price)
+        public Motorcycle(string owner, string brand, string model, string color, int price, bool sidecar) : base(owner, brand, model, color, price)
         {
+            SideCar = sidecar;
 
         }
 
 
-        public void startEngine()
+        public override void startEngine()
         {
             Console.WriteLine("brrrapp, brrrraaaappppp");
         }
-        public void ParryQuickly()
+        public void OnSale()
         {
+            Console.WriteLine($"{Owner} {Brand} är på REA!");
+            Price -= 500;
 
         }
     }
