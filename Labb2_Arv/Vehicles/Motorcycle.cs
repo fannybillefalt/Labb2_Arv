@@ -32,8 +32,9 @@ namespace Labb2_Arv
         }
         public void OnSale()
         {
-            Console.WriteLine($"{Owner} {Brand} är på REA! Nya priset är: {Price}\n");
-            Price -= 500;
+
+            Price -= 5000;
+            Console.WriteLine($"{Owner}s {Brand} är på REA! Nya priset är: {Price}\n");
 
         }
     }
