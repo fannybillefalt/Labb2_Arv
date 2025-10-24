@@ -33,14 +33,20 @@ namespace Labb2_Arv
             Console.WriteLine($"{Owner}s lastbil låter brumm-brumm\n");
         }
 
-        public bool Load()
+        public bool Load(int currentLoad)
         {
-            if (MaxLoad > 600)
+            if (currentLoad > MaxLoad)
             {
                 Console.WriteLine("App, app, app, du har lastat för mycket. Överlastsavgift: 2000 kr\n");
+                return false;
             }
-            
-            return true;
+            else
+            {
+                Console.WriteLine($"Lasten är {currentLoad} kg. Yayy, inte för mycket."); this.Drive();
+
+                return true;
+            }
+
             
         }
     }

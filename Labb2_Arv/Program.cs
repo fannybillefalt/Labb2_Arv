@@ -6,6 +6,7 @@ namespace Labb2_Arv
     {
         static void Main(string[] args)
         {
+            
             Car car = new Car("Fanny", "Volvo", "V70", "Blå", 120000, 4, 3);
             Motorcycle mc = new Motorcycle("Ali", "Yamaha", "MT-07", "Svart", 70000, true);
             Truck truck = new Truck("Olle", "Scania", "R500", "Röd", 450000, 6000);
@@ -22,7 +23,7 @@ namespace Labb2_Arv
 
             truck.PrintInfo();
             truck.startEngine();
-            truck.Load();
+            truck.Load(2000);
 
             minibus.PrintInfo();
             minibus.startEngine();
