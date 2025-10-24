@@ -6,13 +6,14 @@ namespace Labb2_Arv
     {
         static void Main(string[] args)
         {
-            
+            // my objects.
             Car car = new Car("Fanny", "Volvo", "V70", "Blå", 120000, 4, 3);
             Motorcycle mc = new Motorcycle("Ali", "Yamaha", "MT-07", "Svart", 70000, true);
             Truck truck = new Truck("Olle", "Scania", "R500", "Röd", 450000, 6000);
             MiniBus minibus = new MiniBus("Sara", "Volkswagen", "Transporter", "Vit", 250000, 5, 8);
             Coupé coupe = new Coupé("Lisa", "BMW", "M4", "Silver", 700000, 2, 4, 280);
 
+            //calling my methods to be printed in the console.
             car.PrintInfo();
             car.startEngine();
             car.Refuel();

@@ -8,12 +8,14 @@ namespace Labb2_Arv
 {
     internal class Vehicle
     {
+        //5 proporties with default value.
         public string Owner { get; set; } = "Okänd ägare";
         public string Brand { get; set; } = "Okänt märke";
         public string Model { get; set; } = "Okänd modell";
         public string Color { get; set; } = "Okänd färg";
         public int Price { get; set; } = 0;
 
+        //constructor to create new vehicles
         public Vehicle(string owner, string brand, string model, string color, int price)
         {
             Owner = owner;
@@ -22,7 +24,7 @@ namespace Labb2_Arv
             Color = color;
             Price = price;
         }
-
+        //methods 
         public virtual void PrintInfo()
         {
             Console.WriteLine($"Ägare: {Owner}\n" +
