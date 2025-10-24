@@ -15,19 +15,33 @@ namespace Labb2_Arv
             MaxLoad = maxload;
         }
 
-        public void Drive()
+        public override void PrintInfo()
         {
-            Console.WriteLine($"Nu kör {Owner}");
+            Console.WriteLine($"Ägare: {Owner}\n" +
+                $"Märke: {Brand}\n" +
+                $"Modell: {Model}\n" +
+                $"Färg: {Color}\n" +
+                $"Pris: {Price}\n" +
+                $"Last: {MaxLoad}\n");
+        }
+        public override void Drive()
+        {
+            Console.WriteLine($"Nu kör {Owner} iväg med lasten!\n");
         }
         public override void startEngine()
         {
-            Console.WriteLine("brumm-brumm");
+            Console.WriteLine($"{Owner}s lastbil låter brumm-brumm\n");
         }
 
-        public void Unloading()
+        public bool Load()
         {
-            Console.WriteLine("PIP! PIP! PIP! Lastbilen lastar ur.");
-
+            if (MaxLoad > 600)
+            {
+                Console.WriteLine("App, app, app, du har lastat för mycket. Överlastsavgift: 2000 kr\n");
+            }
+            
+            return true;
+            
         }
     }
 }

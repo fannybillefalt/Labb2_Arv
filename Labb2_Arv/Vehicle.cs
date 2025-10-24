@@ -21,28 +21,33 @@ namespace Labb2_Arv
             Model = model;
             Color = color;
             Price = price;
-
         }
 
+        public virtual void PrintInfo()
+        {
+            Console.WriteLine($"Ägare: {Owner}\n" +
+                $"Märke: {Brand}\n" +
+                $"Modell: {Model}\n" +
+                $"Färg: {Color}\n" +
+                $"Pris {Price}");
+        }
 
         public virtual void startEngine()
         {
             Console.WriteLine("vrrrrooooom");
         }
-        public void Drive()
+
+        public virtual void Drive()
         {
             Console.WriteLine($"Nu kör {Owner}");
-        }
-
-        public void PumpingGas()
-        {
-            
         }
 
         public void Break()
         {
             Console.WriteLine($"{Owner}BROMSAAAAAAAAR!");
         }
+
+
 
     }
 }
