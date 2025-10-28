@@ -8,7 +8,7 @@ namespace Labb2_Arv
 {
     internal class Motorcycle : Vehicle
     {
-        public bool SideCar { get; set; } = false;
+        private bool SideCar { get; set; } = false;
 
         public Motorcycle(string owner, string brand, string model, string color, int price, bool sidecar) : base(owner, brand, model, color, price)
         {
@@ -16,6 +16,7 @@ namespace Labb2_Arv
         }
         public override void PrintInfo()
         {
+            //a ternary to have a descriptive output then true/false.
             string sidecar = SideCar ? "Ja, den har en sidovagn" : "Nej, ingen sidovagn!";
             Console.WriteLine($"Ägare: {Owner}\n" +
                 $"Märke: {Brand}\n" +
@@ -28,7 +29,7 @@ namespace Labb2_Arv
 
         public override void startEngine()
         {
-            Console.WriteLine($" {Owner}s motorcykel låter brrrapp, brrrraaaappppp\n");
+            Console.WriteLine($"{Owner}s motorcykel låter brrrapp, brrrraaaappppp\n");
         }
         public void OnSale()
         {

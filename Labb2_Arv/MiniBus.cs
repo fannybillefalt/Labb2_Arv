@@ -12,12 +12,10 @@ namespace Labb2_Arv
 {
     internal class MiniBus : Car
     {
-        public int Seats { get; set; } = 7;
+        private int Seats { get; set; } = 7;
         public MiniBus(string owner, string brand, string model, string color, int price, int doors, int seats) :base(owner, brand, model, color, price, doors, 6)
         {
-
             Seats = seats;
-
         }
 
         public override void PrintInfo()

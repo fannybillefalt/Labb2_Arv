@@ -9,7 +9,7 @@ namespace Labb2_Arv
             // my objects.
             Car car = new Car("Fanny", "Volvo", "V70", "Blå", 120000, 4, 3);
             Motorcycle mc = new Motorcycle("Ali", "Yamaha", "MT-07", "Svart", 70000, true);
-            Truck truck = new Truck("Olle", "Scania", "R500", "Röd", 450000, 6000);
+            Truck truck = new Truck("Olle", "Scania", "R500", "Röd", 450000, 600);
             MiniBus minibus = new MiniBus("Sara", "Volkswagen", "Transporter", "Vit", 250000, 5, 8);
             Coupé coupe = new Coupé("Lisa", "BMW", "M4", "Silver", 700000, 2, 4, 280);
 
@@ -24,7 +24,7 @@ namespace Labb2_Arv
 
             truck.PrintInfo();
             truck.startEngine();
-            truck.Load(2000);
+            truck.Load(650);
 
             minibus.PrintInfo();
             minibus.startEngine();
