@@ -8,7 +8,7 @@ namespace Labb2_Arv
 {
     internal class Truck : Vehicle
     {
-        public int MaxLoad { get; set; } = 600;
+        private int MaxLoad { get; set; } = 600;
 
         public Truck(string owner, string brand, string model, string color, int price, int maxload) : base(owner, brand, model, color, price)
         {
@@ -33,6 +33,7 @@ namespace Labb2_Arv
             Console.WriteLine($"{Owner}s lastbil låter brumm-brumm\n");
         }
 
+        //if currentload is bigger then the default value
         public bool Load(int currentLoad)
         {
             if (currentLoad > MaxLoad)
@@ -42,8 +43,8 @@ namespace Labb2_Arv
             }
             else
             {
-                Console.WriteLine($"Lasten är {currentLoad} kg. Yayy, inte för mycket."); this.Drive();
-
+                Console.WriteLine($"Lasten är {currentLoad} kg. Yayy, inte för mycket."); 
+                this.Drive();//calling Drive method
                 return true;
             }
 

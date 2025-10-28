@@ -8,7 +8,7 @@ namespace Labb2_Arv.Vehicles.Cars
 {
     internal class Coupé : Car
     {
-        public int MaximumSpeed { get; set; } = 250;
+        private int MaximumSpeed { get; set; } = 250;
         public Coupé(string owner, string brand, string model, string color, int price, int doors, int fuel, int maximumspeed) : base(owner, brand, model, color, price, doors, fuel)
         {
             MaximumSpeed = maximumspeed;

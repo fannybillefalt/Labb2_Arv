@@ -24,7 +24,7 @@ namespace Labb2_Arv
             Color = color;
             Price = price;
         }
-        //methods 
+        //methods, virtual to be able to override
         public virtual void PrintInfo()
         {
             Console.WriteLine($"Ägare: {Owner}\n" +
